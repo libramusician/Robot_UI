@@ -1,0 +1,64 @@
+{% extends "baseLayout.html" %}
+{% block content %}
+<div class="tool-box">
+    <div class="left">
+        <div class="onoff">
+            <div>
+                <h3>CAMARA</h3>
+            </div>
+            <i class="outside" onclick="change_status(this)"><div class="inside"></div></i><span>OFF</span>
+
+        </div>
+        <div class="onoff">
+            <div>
+                <h3>SPEED SENSOR</h3>
+            </div>
+            <i class="outside" onclick="change_status(this)"><div class="inside"></div></i><span>OFF</span>
+        </div>
+        <div class="onoff">
+            <div>
+                <h3>DISTANCE SENSOR</h3>
+            </div>
+            <i class="outside" onclick="change_status(this)"><div class="inside"></div></i><span>OFF</span>
+        </div>
+        <div class="onoff">
+            <div>
+                <h3>OBSTACLE SENSOR</h3>
+            </div>
+            <i class="outside" onclick="change_status(this)"><div class="inside"></div></i><span>OFF</span>
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="top">
+            <button>CONNECT</button><i class="fas fa-spinner"></i>
+        </div>
+        <div class="bottom" id="controller">
+            <i class="fas fa-undo-alt"
+               onmousedown="tid = setInterval(move_method.rotate_left,50)"
+               onmouseup="clearInterval(tid);move_method.key_up()"></i>
+
+            <i class="fas fa-caret-square-up"
+               onmousedown="tid = setInterval(move_method.front,50)"
+               onmouseup="clearInterval(tid);move_method.key_up()"></i>
+
+            <i class="fas fa-redo-alt"
+               onmousedown="tid = setInterval(move_method.rotate_right,50)"
+               onmouseup="clearInterval(tid);move_method.key_up()"></i>
+
+            <i class="fas fa-caret-square-left"
+               onmousedown="tid = setInterval(move_method.to_left,50)"
+               onmouseup="clearInterval(tid);move_method.key_up()"></i>
+
+            <i class="fas fa-caret-square-down"
+               onmousedown="tid = setInterval(move_method.backwards,50)"
+               onmouseup="clearInterval(tid);move_method.key_up()"></i>
+
+            <i class="fas fa-caret-square-right"
+               onmousedown="tid = setInterval(move_method.to_right,50)"
+               onmouseup="clearInterval(tid);move_method.key_up()"></i>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

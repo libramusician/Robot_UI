@@ -1,0 +1,42 @@
+{% extends "baseLayout.html" %}
+{% block content %}
+    <div class="video-box">
+        <div class="video-left">
+            <video id="videoSource1" class="videoShow" style="opacity:0"></video>
+            <canvas id="videoShow1" class="videoShow" onclick="show_menu(this,'videoSource1');"></canvas>
+            <i class="fas fa-play-circle" id="vplay" onclick="hide_menu(this,'videoSource1');getVideo('videoSource1','videoShow1')"></i>
+            <h3>WATCH VIDEO</h3>
+            <p>Main Camera View</p>
+            <div>
+                <i class="fa-solid fa-microphone-lines-slash"></i>
+                <i class="fa-solid fa-desktop"></i>
+            </div>
+        </div>
+        <div class="video-right">
+            <div class="top" id="iplay">
+                <video id="videoSource2" style="opacity:0" class="videoShow"></video>
+                <canvas id="videoShow2" class="videoShow" onclick="show_menu(this,'videoSource2');"></canvas>
+                <i class="fas fa-play-circle play-btn" onclick="hide_menu(this,'videoSource2');getVideo('videoSource2','videoShow2')"></i>
+                <h5>WATCH VIDEO</h5>
+                <p>Second Camera View</p>
+            </div>
+            <div class="bottom">
+                <div class="date">
+                    <h3>Date:</h3>
+                    <p id="date">----/--/--</p>
+                </div>
+                <div class="time">
+                    <h3>Time:</h3>
+                    <p id="time">--:--:-- pm</p>
+                </div>
+                <div class="house">
+                    <img src="/static/8e8ab696842f821f27407c00edf3818.jpg">
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+<script src="/static/opencvjs/opencv.js"></script>
+{% endblock %}

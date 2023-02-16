@@ -1,0 +1,11 @@
+{% extends "baseLayout.html" %}
+{% block content %}
+    <div class="index-main-left">
+        <h1>VISUAL-BASED ROBOTICS</h1>
+        <h3>Project designed by SYSC 4907<br>H.Gao, G.Dong, J.Han, B.Zhang<br>Professor C.Shen</h3>
+        <button type="button" onclick="location.href='{{ url_for( 'more' ) }}'">LEARN MORE</button>
+    </div>
+    <div class="index-main-right">
+        <img src="/static/3310ecfafaddb821023abeb2a7ca4e1.jpg">
+    </div>
+{% endblock %}

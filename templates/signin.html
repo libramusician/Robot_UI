@@ -1,0 +1,11 @@
+{% extends "baseLayout.html" %}
+{% block content %}
+<form class="box" action="signin.html" method="POST">
+    <div>SIGN IN:</div>
+    <div><input type="text" name="" placeholder="Name"></div>
+    <div><input type="password" name="" placeholder="Password"></div>
+    <div><input type="checkbox"><label>I have read and agree the regulation below.</label></div>
+    <div><a href="/">Read me first...</a></div>
+    <div><button class="button" type="submit">SIGN IN</button></div>
+</form>
+{% endblock %}
